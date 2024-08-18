@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Motivación - Día de la Lectura</title>
+    <link rel="stylesheet" href="est.css">
+</head>
+<body>
+    <div class="card">
+        <h1>¡Feliz Día de la Lectura!</h1>
+        <p>La lectura es una ventana al mundo, abre un libro y deja volar tu imaginación.</p>
+        <p>Un libro es un sueño que tienes en tus manos. ¡Disfruta cada página!</p>
+        <center><img src="img.jpg" alt="Imagen de Lectura" class="card-image"></center>
+        
+        <button id="confetti-button">Empieza a Leer</button>
+    </div>
+
+    <!-- Incluir canvas-confetti desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementById('confetti-button').addEventListener('click', () => {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
