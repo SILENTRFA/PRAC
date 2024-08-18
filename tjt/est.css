@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+    100% { background: linear-gradient(135deg, #86a8e7, #91eae4); }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    margin: 20px;
+    animation: cardAnimation 1s ease-out;
+}
+
+@keyframes cardAnimation {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.card-image {
+    width: 100px;  /* Ajusta este valor según sea necesario */
+    height: 100px;  /* Ajusta este valor según sea necesario */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    animation: imageFadeIn 2s ease-in;
+}
+
+@keyframes imageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: textFadeIn 2s ease-in;
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.card p {
+    color: #555;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    animation: textSlideIn 1.5s ease-in-out;
+}
+
+@keyframes textSlideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.card button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .card {
+        padding: 20px;
+    }
+    .card h1 {
+        font-size: 1.5rem;
+    }
+    .card p {
+        font-size: 1rem;
+    }
+    .card-image {
+        width: 80px;
+        height: 80px;
+    }
+    .card button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
